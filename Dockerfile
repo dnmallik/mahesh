@@ -1,4 +1,4 @@
-# Start with a base image containing Java runtime
+## Start with a base image containing Java runtime
 FROM openjdk:8-jdk-alpine
 
 # Add Maintainer Info
@@ -10,10 +10,10 @@ VOLUME /tmp
 # Make port 8080 available to the world outside this container
 #EXPOSE 7777
 
-# The application's jar file
+## The application's jar file
 ARG JAR_FILE=target/search_functionality-0.0.1-SNAPSHOT.jar
 
-# Add the application's jar to the container
+## Add the application's jar to the container
 ADD ${JAR_FILE} search_functionality-0.0.1-SNAPSHOT.jar
 
 # Run the jar file 
